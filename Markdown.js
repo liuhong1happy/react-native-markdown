@@ -139,9 +139,9 @@ var Markdown = React.createClass({
 
   render: function() {
 
-    var child = _.isArray(this.props.children)
-      ? this.props.children.join('') : this.props.children;
-    var tree = this.parse(child);
+    var content = _.isArray(this.props.content)
+      ? this.props.content.join('') : this.props.content;
+    var tree = this.parse(content);
     return <View style={[styles.view, this.props.style.view]}>{this.renderer(tree)}</View>;
   }
 });
